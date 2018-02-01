@@ -2,7 +2,6 @@ package com.skaiblue.replicreator;
 
 public class Vector2 {
 
-
     public int x;
 
     public int y;
@@ -21,24 +20,20 @@ public class Vector2 {
         this.y = y;
     }
 
-    public Vector2 north()
-    {
+    public Vector2 north() {
         return new Vector2(x, y - 1);
     }
 
-    public Vector2 south()
-    {
+    public Vector2 south() {
         return new Vector2(x, y + 1);
     }
 
-    public Vector2 east()
-    {
-        return new Vector2(x + 1, y );
+    public Vector2 east() {
+        return new Vector2(x + 1, y);
     }
 
-    public Vector2 west()
-    {
-        return new Vector2(x - 1, y );
+    public Vector2 west() {
+        return new Vector2(x - 1, y);
     }
 
 

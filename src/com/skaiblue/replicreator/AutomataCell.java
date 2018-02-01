@@ -6,4 +6,12 @@ public class AutomataCell {
 
     public boolean canModify = false;
 
+
+    public AutomataCell() {
+    }
+
+    public AutomataCell(int state) {
+        this.state = state;
+    }
+
 }

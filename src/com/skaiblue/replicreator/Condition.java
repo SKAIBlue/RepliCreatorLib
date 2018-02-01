@@ -1,5 +1,7 @@
 package com.skaiblue.replicreator;
 
+import java.util.Objects;
+
 public class Condition {
 
     private int north;
@@ -58,5 +60,23 @@ public class Condition {
 
     public boolean isMatch(int north, int west, int center, int east, int south) {
         return north == this.north && west == this.west && center == this.center && east == this.east && south == this.south;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Condition condition = (Condition) o;
+        return north == condition.north &&
+                west == condition.west &&
+                center == condition.center &&
+                east == condition.east &&
+                south == condition.south &&
+                transitionValue == condition.transitionValue;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(north, west, center, east, south);
     }
 }
