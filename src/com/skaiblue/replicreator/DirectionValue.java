@@ -43,6 +43,11 @@ public class DirectionValue {
     }
 
     @Override
+    public String toString() {
+        return String.format("%10d%10d%10d%10d%10d", north, west, center, east, south);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

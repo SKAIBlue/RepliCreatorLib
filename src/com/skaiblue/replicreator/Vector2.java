@@ -37,4 +37,8 @@ public class Vector2 {
     }
 
 
+    @Override
+    public String toString() {
+        return String.format("x, y = (%d, %d)", x, y);
+    }
 }
