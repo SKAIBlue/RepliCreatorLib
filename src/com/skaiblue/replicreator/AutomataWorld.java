@@ -31,13 +31,16 @@ public class AutomataWorld {
         cells.set(pos, state);
     }
 
+
     public int getWidth() {
         return cells.getWidth();
     }
 
+
     public int getHeight() {
         return cells.getHeight();
     }
+
 
     public int getState(Vector2 pos) {
         return cells.getState(pos);
@@ -52,10 +55,9 @@ public class AutomataWorld {
         int width = this.getWidth();
         int height = this.getHeight();
         transitionListener.onStartTransition();
-        for (int i = 0; i < height; i += 1) {
-            for (int j = 0; j < width; j += 1) {
+        for (int i = 0; i <= height; i += 1) {
+            for (int j = 0; j <= width; j += 1) {
                 Vector2 pos = new Vector2(j, i);
-                System.out.println(pos);
                 int state = transitionListener.onTransition(getState(pos.north()), getState(pos.west()), getState(pos), getState(pos.east()), getState(pos.south()));
                 nextState.set(pos, state);
             }
